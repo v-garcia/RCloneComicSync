@@ -1,0 +1,130 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{75E59369-7762-41EF-A250-5ED3476297C3}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Lib</RootNamespace>
+    <AssemblyName>Lib</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="AlphaFS, Version=2.2.0.0, Culture=neutral, PublicKeyToken=4d31a58f7d7ad5c9, processorArchitecture=MSIL">
+      <HintPath>..\packages\AlphaFS.2.2.6\lib\net452\AlphaFS.dll</HintPath>
+    </Reference>
+    <Reference Include="Jil, Version=2.17.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Jil.2.17.0\lib\net45\Jil.dll</HintPath>
+    </Reference>
+    <Reference Include="MorseCode.ITask, Version=2.0.3.0, Culture=neutral, PublicKeyToken=214321fcab92c5da, processorArchitecture=MSIL">
+      <HintPath>..\packages\MorseCode.ITask.2.0.3\lib\net45\MorseCode.ITask.dll</HintPath>
+    </Reference>
+    <Reference Include="RunProcessAsTask, Version=1.2.4.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\RunProcessAsTask.1.2.4\lib\net45\RunProcessAsTask.dll</HintPath>
+    </Reference>
+    <Reference Include="Sigil, Version=4.7.0.0, Culture=neutral, PublicKeyToken=2d06c3494341c8ab, processorArchitecture=MSIL">
+      <HintPath>..\packages\Sigil.4.7.0\lib\net45\Sigil.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Transactions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AppConfig\AppConfig.cs" />
+    <Compile Include="AppConfig\AppConfigManager.cs" />
+    <Compile Include="AppConfig\AppConstants.cs" />
+    <Compile Include="AppConfig\IAppConfig.cs" />
+    <Compile Include="AppConfig\IAppConfigManager.cs" />
+    <Compile Include="AppConfig\IAppConstants.cs" />
+    <Compile Include="ComicFilesChecker\Checkers\7Zip.cs" />
+    <Compile Include="ComicFilesChecker\Checkers\FileChecker.cs" />
+    <Compile Include="ComicFilesChecker\Checkers\IFileChecker.cs" />
+    <Compile Include="ComicFilesChecker\Checkers\IPDFInfo.cs" />
+    <Compile Include="ComicFilesChecker\Checkers\I_7Zip.cs" />
+    <Compile Include="ComicFilesChecker\Checkers\PDFInfo.cs" />
+    <Compile Include="ComicFilesChecker\ComicFileCheck\ComicFileCheck.cs" />
+    <Compile Include="ComicFilesChecker\ComicFileCheck\IComicFileCheck.cs" />
+    <Compile Include="ComicFiles\ComicFileManager.cs" />
+    <Compile Include="ComicFiles\IComicFileManager.cs" />
+    <Compile Include="Features\ActionCleanWorkingDir.cs" />
+    <Compile Include="Features\ActionCopy.cs" />
+    <Compile Include="Features\IActionCleanWorkingDir.cs" />
+    <Compile Include="Features\IActionCopy.cs" />
+    <Compile Include="Logger\ILogWriter.cs" />
+    <Compile Include="Logger\LogWriter.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="RClone\ApiObjects\IJob.cs" />
+    <Compile Include="RClone\ApiObjects\Job.cs" />
+    <Compile Include="RClone\Hooks\CheckCopiedFileHook.cs" />
+    <Compile Include="RClone\Hooks\Hook.cs" />
+    <Compile Include="RClone\Hooks\IHook.cs" />
+    <Compile Include="RClone\Hooks\ICheckCopiedFileHook.cs" />
+    <Compile Include="RClone\Hooks\INewFileCopiedHook.cs" />
+    <Compile Include="RClone\Hooks\NewFileCopiedHook.cs" />
+    <Compile Include="RClone\IRClone.cs" />
+    <Compile Include="RClone\IRCloneApi.cs" />
+    <Compile Include="RClone\RClone.cs" />
+    <Compile Include="RClone\RCloneApi.cs" />
+    <Compile Include="RClone\RCloneOperations\IRCloneCopyOperation.cs" />
+    <Compile Include="RClone\RCloneOperations\IRCloneOperationsManager.cs" />
+    <Compile Include="RClone\RCloneOperations\IRCLoneOperationsManagerAutoRefreshed.cs" />
+    <Compile Include="RClone\RCloneOperations\IRClonePath.cs" />
+    <Compile Include="RClone\RCloneOperations\RCloneCopyOperation.cs" />
+    <Compile Include="RClone\RCloneOperations\RCloneOperationsManager.cs" />
+    <Compile Include="RClone\RCloneOperations\RCLoneOperationsManagerAutoRefreshed.cs" />
+    <Compile Include="RClone\RCloneOperations\RClonePath.cs" />
+    <Compile Include="RClone\Watchers\IRCloneLogWatcher.cs" />
+    <Compile Include="RClone\Watchers\RCloneFileCopied.cs" />
+    <Compile Include="RClone\Watchers\RCloneLogWatcher.cs" />
+    <Compile Include="Tools\HardLinks\HardLinks.cs" />
+    <Compile Include="Tools\HardLinks\IHardLinks.cs" />
+    <Compile Include="Tools\LiveFileReader\ILiveFileReader.cs" />
+    <Compile Include="Tools\LiveFileReader\LiveFileReader.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Resources\" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
