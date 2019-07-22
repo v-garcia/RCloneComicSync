@@ -1,7 +1,7 @@
 A program for syncing and checking comics files for your windows device.
 
-Usage - ConsoleAppTest <action> -options
-Exemple - ``comicsync copy remote1:path remote2:path --DestinationDir C://Dest"``
+Usage - ConsoleAppTest <action> -options   
+Exemple - ``comicsync copy remote1:path remote2:path --DestinationDir C://Dest"``   
 
 GlobalOption   Description
 Help (-?)      Shows this help

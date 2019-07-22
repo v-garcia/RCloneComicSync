@@ -21,4 +21,5 @@ CLI
 ===============
 
 Usage:
-``comicsync copy remote1:path remote2:path --DestinationDir C://Dest``
+``comicsync copy remote1:path remote2:path --DestinationDir C://Dest``   
+[Console readme](ConsoleApp/readme.md)
